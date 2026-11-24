@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+
+    // Put your admin Google email here (same as adminEmails in config.js).
+    function isAdmin() {
+      return signedIn()
+        && request.auth.token.email_verified == true
+        && request.auth.token.email in ['your.email@gmail.com'];
+    }
+
+    // Everyone sees which times are booked; each player writes only their own bookings.
+    match /bookings/{uid} {
+      allow read: if true;
+      allow write: if signedIn() && (request.auth.uid == uid || isAdmin());
+    }
+
+    // Short "held while checking out" locks, like seats in a movie booking.
+    match /holds/{uid} {
+      allow read: if true;
+      allow write: if signedIn() && request.auth.uid == uid;
+    }
+
+    // Phone / Telegram numbers: only the player and the admin can read them.
+    match /contacts/{uid} {
+      allow read, write: if signedIn() && (request.auth.uid == uid || isAdmin());
+    }
+
+    // Booking statuses, blocked times and settings: public to read, admin to change.
+    match /admin/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /config/{doc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Used to make two simultaneous bookings for the same time impossible.
+    match /locks/{doc} {
+      allow read, write: if signedIn();
+    }
+  }
+}

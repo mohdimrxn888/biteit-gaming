@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BiteIT Gaming — Book the PS5</title>
+<meta name="description" content="Book your PS5 session at BiteIT Gaming. Live slots, instant confirmation.">
+<meta name="theme-color" content="#0a0c13">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ff3b5c' d='M16 2a14 14 0 1 0 13.6 17.3 5 5 0 0 1-5.6-6.6 5 5 0 0 1-4.4-8.2A14 14 0 0 0 16 2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try{const t=localStorage.getItem('biteit-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}</script>
+<style>
+:root,:root[data-theme=dark]{color-scheme:dark;--bg:#0a0c13;--bg2:#0f1220;--card:#151a28;--card2:#1b2133;--line:#262d42;--ink:#eef1f8;--muted:#8f98b0;
+  --accent:#ff3b5c;--accent2:#22c7e6;--ok:#2fd889;--warn:#ffb547;--selInk:#05141a;--shadow:0 10px 30px #0006}
+:root[data-theme=light]{color-scheme:light;--bg:#f3f5fa;--bg2:#e9ecf4;--card:#ffffff;--card2:#f5f7fb;--line:#dce1eb;--ink:#0c111d;--muted:#5a6378;
+  --accent:#e5173f;--accent2:#0a8db0;--ok:#11995a;--warn:#b86e00;--selInk:#ffffff;--shadow:0 10px 30px #0c111d14}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3,.brand,.disp{font-family:"Chakra Petch",Inter,sans-serif;line-height:1.05;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5.4vw,56px)}h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:6px}h3{font-size:19px}
+.wrap{max-width:1240px;margin:0 auto}.band{padding:clamp(32px,5vw,64px) max(5vw,16px)}
+.lead{color:var(--muted);margin:0 0 20px}
+html{scroll-padding-top:80px;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+a{color:inherit}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:1px solid var(--line);background:var(--card);border-radius:12px;min-height:44px;padding:8px 14px;font-weight:600;transition:border-color .15s,transform .15s,background .15s}
+button:hover:not(:disabled){border-color:var(--accent2)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+button[aria-pressed=true]{background:var(--accent2);border-color:var(--accent2);color:var(--selInk)}
+button:disabled{cursor:not-allowed;opacity:.4}
+/* header */
+.nav{position:sticky;top:0;z-index:6;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:10px;padding:10px max(5vw,16px);flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:700;text-decoration:none;margin-right:auto;letter-spacing:.01em}
+.brand em{font-style:normal;color:var(--accent)}
+.links{display:flex;gap:2px;flex-wrap:wrap}.links a{text-decoration:none;font-weight:600;font-size:15px;padding:10px 12px;border-radius:10px;color:var(--muted)}.links a:hover{color:var(--ink);background:var(--card)}
+.icon{width:44px;padding:0;display:grid;place-items:center}
+.wa{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#04230f;border-radius:12px;padding:10px 16px;font-weight:700;text-decoration:none;min-height:44px;white-space:nowrap}
+.wa:hover{filter:brightness(1.06)}
+@media(max-width:760px){.links{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap}.links a{flex:none}.nav .wa span{display:none}}
+/* hero: stays a dark arena in both themes */
+.hero{position:relative;overflow:hidden;background:#090b12;color:#eef1f8;
+  background-image:radial-gradient(60% 80% at 85% 10%,#ff3b5c40,transparent 60%),radial-gradient(50% 70% at 10% 100%,#22c7e630,transparent 60%),
+  linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:auto,auto,40px 40px,40px 40px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:center}
+.kicker{display:inline-flex;gap:8px;align-items:center;font-size:14px;font-weight:600;color:#9fe9f7;background:#22c7e61a;border:1px solid #22c7e640;padding:6px 12px;border-radius:999px;margin-bottom:16px}
+.hero p{color:#b8c0d4;font-size:18px;max-width:56ch;margin:14px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{border:1px solid #ffffff22;background:#ffffff0a;border-radius:10px;padding:7px 12px;font-size:14px;font-weight:600;white-space:nowrap}
+.heroCta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:12px;font-weight:700;text-decoration:none;border:0}
+.btn.red{background:var(--accent);color:#fff;box-shadow:0 8px 24px #ff3b5c55}
+.live{background:#121624e6;border:1px solid #2a3149;border-radius:20px;padding:22px;box-shadow:0 20px 50px #0008}
+.live .lbl{font-size:13px;color:#8f98b0;font-weight:600;display:flex;justify-content:space-between}
+.live .big{font:700 30px "Chakra Petch",sans-serif;margin:8px 0 4px;display:flex;align-items:center;gap:10px}
+.live .sub{color:#b8c0d4;font-size:15px}
+.dot{width:12px;height:12px;border-radius:50%;flex:none}
+.dot.free{background:#2fd889;box-shadow:0 0 0 5px #2fd88926;animation:pulse 2s infinite}.dot.busy{background:#ff3b5c;box-shadow:0 0 0 5px #ff3b5c26}
+@keyframes pulse{50%{box-shadow:0 0 0 9px #2fd88910}}
+.meter{height:8px;border-radius:9px;background:#ffffff14;margin-top:16px;overflow:hidden}.meter i{display:block;height:100%;background:linear-gradient(90deg,#22c7e6,#ff3b5c);border-radius:9px}
+.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+.mini div{background:#ffffff08;border-radius:12px;padding:10px}.mini b{display:block;font:700 20px "Chakra Petch",sans-serif}.mini span{font-size:12px;color:#8f98b0}
+.notice{background:var(--accent);color:#fff;padding:11px max(5vw,16px);font-weight:600;text-align:center}
+.mode{background:var(--card2);color:var(--muted);padding:10px max(5vw,16px);font-size:14px;text-align:center;border-bottom:1px solid var(--line)}
+/* booking */
+.board{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:24px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,2.4vw,24px);box-shadow:var(--shadow)}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.days button{flex:none;scroll-snap-align:start;min-width:92px;text-align:left;padding:10px 14px}
+.days small{display:block;font-weight:500;font-size:13px;opacity:.75}
+.screen{margin:18px auto 6px;width:82%;height:10px;border-radius:50%/0 0 100% 100%;border-top:3px solid var(--accent2);box-shadow:0 -8px 22px -6px var(--accent2)}
+.screenLbl{text-align:center;font-size:12px;color:var(--muted);letter-spacing:.06em;margin-bottom:16px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin:0 0 14px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:1px solid var(--line);background:var(--card2)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px}
+.slot{display:flex;flex-direction:column;align-items:flex-start;padding:10px 12px;text-align:left;border-radius:12px;min-height:62px;background:var(--card2)}
+.slot b{font-size:15px;white-space:nowrap}.slot span{font-size:12.5px;font-weight:600;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.slot.free span{color:var(--ok)}
+.slot.free:hover{transform:translateY(-2px)}
+.slot.sel,.i-sel{background:var(--accent2)!important;border-color:var(--accent2)!important;color:var(--selInk)}.slot.sel span{color:inherit}
+.slot.taken,.i-taken{background:repeating-linear-gradient(135deg,var(--card2) 0 6px,var(--line) 6px 8px)!important}.slot.taken span{color:var(--accent)}
+.slot.held,.i-held{border:1px dashed var(--warn)!important}.slot.held span{color:var(--warn)}
+.slot.mine,.i-mine{border:2px solid var(--accent)!important}.slot.mine span{color:var(--accent)}
+.slot.blocked{background:var(--bg2)}
+.slot:disabled{opacity:1;cursor:default}.slot.past{opacity:.35}
+.empty{padding:22px;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+.ticket{position:sticky;top:84px}
+.ticket .when{font:700 22px "Chakra Petch",sans-serif;margin:6px 0 2px}
+.hold{display:none;align-items:center;gap:8px;margin-top:10px;font-size:14px;font-weight:600;color:var(--warn);background:color-mix(in srgb,var(--warn) 12%,transparent);border-radius:10px;padding:8px 12px}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+input,select,textarea{width:100%;font-size:16px;border:1px solid var(--line);background:var(--card2);border-radius:10px;padding:10px 12px;min-height:44px}
+textarea{min-height:96px;resize:vertical}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 12px}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 12px;padding-top:14px;border-top:1px dashed var(--line)}
+.total b{font:700 30px "Chakra Petch",sans-serif;white-space:nowrap}
+.cta{width:100%;background:var(--accent);border-color:var(--accent);color:#fff;font-size:17px;min-height:52px}
+.cta:hover:not(:disabled){filter:brightness(1.08);border-color:var(--accent)}
+.ghost{background:transparent}.small{font-size:13px;color:var(--muted)}
+/* lists */
+.list{display:grid;gap:10px}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;background:var(--card2);border:1px solid var(--line)}
+.b-confirmed,.b-done{color:var(--ok);border-color:currentColor}.b-pending{color:var(--warn);border-color:currentColor}.b-rejected,.b-cancelled,.b-noshow{color:var(--accent);border-color:currentColor}.b-paid{background:var(--accent2);color:var(--selInk);border-color:var(--accent2)}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.price{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;position:relative}
+.price.pop{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.price .tag{position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;color:var(--accent)}
+.price b{display:block;font:700 30px "Chakra Petch",sans-serif;white-space:nowrap;margin-top:6px}
+.alt{background:var(--bg2)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+ol{padding-left:22px;margin:0}ol li{margin-bottom:8px}
+.waCard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}.stat b{display:block;font:700 clamp(20px,3vw,26px) "Chakra Petch",sans-serif;white-space:nowrap}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}th{font-size:13px;color:var(--muted);font-weight:600}
+td .row button{min-height:36px;padding:4px 10px;font-size:13px}
+.num{text-align:right;white-space:nowrap}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:12px;font-weight:600;max-width:90vw;display:none;z-index:9}
+.modal{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;padding:16px;z-index:8}
+.modal>div{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;max-width:430px;width:100%;text-align:center}
+.code{font:700 38px "Chakra Petch",sans-serif;color:var(--accent);letter-spacing:.06em;margin:8px 0}
+footer{border-top:1px solid var(--line);padding:24px max(5vw,16px);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.scroll{overflow-x:auto}
+@media(max-width:900px){.board,.hero .wrap,.cols{grid-template-columns:minmax(0,1fr)}.ticket{position:static}}
+@media(max-width:600px){.two{grid-template-columns:minmax(0,1fr)}.slots{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}
+table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 12px;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--muted)}.stack td:empty{display:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top" aria-label="BiteIT Gaming home">
+    <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path fill="#ff3b5c" d="M16 2a14 14 0 1 0 13.6 17.3 5 5 0 0 1-5.6-6.6 5 5 0 0 1-4.4-8.2A14 14 0 0 0 16 2z"/><path fill="#fff" d="M10 13h2v-2h2v2h2v2h-2v2h-2v-2h-2zm9 3.5a1.5 1.5 0 1 1 0 .01zm-3 3a1.5 1.5 0 1 1 0 .01z" opacity=".9"/></svg>
+    <span id="brandName">BiteIT <em>Gaming</em></span></a>
+  <nav class="links" aria-label="Sections"><a href="#book">Book</a><a href="#mine">My bookings</a><a href="#pricing">Pricing</a><a href="#rules">Rules</a><a href="#admin" id="adminLink" hidden>Admin</a></nav>
+  <button type="button" class="icon" id="themeBtn" aria-label="Switch to light mode"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" id="themeIco"></svg></button>
+  <a class="wa waLink" href="#" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg><span>Join WhatsApp</span></a>
+</div></header>
+<div class="notice" id="notice" hidden></div>
+<div class="mode" id="modeNote" hidden></div>
+
+<section class="hero band" id="top"><div class="wrap">
+  <div>
+    <div class="kicker"><span class="dot free" style="animation:none;width:8px;height:8px"></span>PS5 lounge · live slot booking</div>
+    <h1>Reserve your PS5 session in seconds.</h1>
+    <p>Pick a free time, lock it before anyone else, pay at the door and play. Booked slots disappear for everyone instantly, just like movie seats.</p>
+    <div class="chips"><span class="chip">PS5 Slim</span><span class="chip">27" 120 Hz monitor</span><span class="chip">GTA VI ready</span><span class="chip">2 controllers</span><span class="chip" id="roomChip" hidden></span></div>
+    <div class="heroCta"><a class="btn red" href="#book">Book a slot</a><a class="btn wa waLink" href="#" target="_blank" rel="noopener">Join the WhatsApp group</a></div>
+  </div>
+  <div class="live" aria-live="polite">
+    <div class="lbl"><span>Console status</span><span id="clock"></span></div>
+    <div class="big" id="nowBig">Loading…</div>
+    <div class="sub" id="nowSub"></div>
+    <div class="meter" aria-hidden="true"><i id="meter" style="width:0"></i></div>
+    <div class="mini"><div><b id="mFree">–</b><span>free slots today</span></div><div><b id="mNext">–</b><span>next free</span></div><div><b id="mFrom">–</b><span>from</span></div></div>
+  </div>
+</div></section>
+
+<section class="band" id="book"><div class="wrap">
+  <h2>Choose your slot</h2><p class="lead">Tap a start time, then pick how long. Your slot is held for 5 minutes while you check out.</p>
+  <div class="board">
+    <div class="panel">
+      <div class="days" id="days" role="tablist" aria-label="Day"></div>
+      <div class="screen" aria-hidden="true"></div><div class="screenLbl">SCREEN · 27" 120 Hz</div>
+      <div class="legend"><span><i></i>Available</span><span><i class="i-sel"></i>Selected</span><span><i class="i-held"></i>Being booked</span><span><i class="i-taken"></i>Booked</span><span><i class="i-mine"></i>Yours</span></div>
+      <div class="slots" id="slots"></div>
+    </div>
+    <form class="panel ticket" id="form" novalidate>
+      <div class="small">Your ticket</div>
+      <div class="when" id="when">Pick a time</div>
+      <div class="small" id="whenSub">Nothing selected yet.</div>
+      <div class="hold" id="hold" role="status"></div>
+      <label>Duration</label><div class="row" id="durs"></div>
+      <label>Players</label><div class="row"><button type="button" id="p1" aria-pressed="true">1 player</button><button type="button" id="p2" aria-pressed="false">2 players</button></div>
+      <label for="game">Game</label><select id="game"></select>
+      <div class="two"><div><label for="fname">Your name</label><input id="fname" autocomplete="name" maxlength="40"></div>
+        <div><label for="froom">Room no.</label><input id="froom" maxlength="12"></div></div>
+      <label for="fcontact">WhatsApp / phone</label><input id="fcontact" maxlength="40" inputmode="tel" placeholder="+998 …">
+      <label for="fnote">Note (optional)</label><input id="fnote" maxlength="80" placeholder="Bringing my own controller, etc.">
+      <div class="total"><span>Total</span><b id="total">—</b></div>
+      <button class="cta" id="bookBtn" type="submit" disabled>Confirm booking</button>
+      <div id="ownerTools" hidden style="margin-top:14px;border-top:1px dashed var(--line);padding-top:6px">
+        <label for="blockReason">Admin: block this time instead</label>
+        <div class="row"><input id="blockReason" placeholder="Reason, e.g. maintenance" style="flex:1 1 160px"><button type="button" id="blockBtn">Block</button></div>
+      </div>
+      <p class="small" id="limitNote"></p>
+    </form>
+  </div>
+</div></section>
+
+<section class="band alt" id="mine"><div class="wrap">
+  <h2>My bookings</h2><p class="lead">Saved on this phone or laptop. Keep your booking code; the admin can find you with it.</p>
+  <div class="list" id="mineList"></div>
+</div></section>
+
+<section class="band" id="pricing"><div class="wrap">
+  <h2>Pricing</h2><p class="lead" id="extraNote"></p>
+  <div class="prices" id="priceCards"></div>
+</div></section>
+
+<section class="band alt" id="rules"><div class="wrap cols">
+  <div><h2>House rules</h2><p class="lead">Keep it fair so everyone gets their game time.</p><ol id="rulesList"></ol></div>
+  <div><h2>Games &amp; setup</h2><p id="gamesLine"></p>
+    <p>PS5 Slim on a 27" 120 Hz monitor with two controllers. Pay the admin before you start; your booking turns <span class="badge b-paid">Paid</span> once received.</p>
+    <p id="contactLine" class="small"></p>
+    <div class="waCard"><h3>Stay in the loop</h3><p class="small" style="margin:8px 0 14px">Tournaments, new games, schedule changes and free slots get posted in the WhatsApp group first.</p><a class="wa waLink" href="#" target="_blank" rel="noopener">Join WhatsApp group</a></div>
+  </div>
+</div></section>
+
+<section class="band" id="admin" hidden><div class="wrap">
+  <h2>Admin</h2><p class="lead">Only you see this section.</p>
+  <div class="stats" id="stats"></div>
+  <div class="row" style="margin-bottom:12px" id="admTabs">
+    <button type="button" data-v="up" aria-pressed="true">Upcoming</button><button type="button" data-v="today" aria-pressed="false">Today</button><button type="button" data-v="pending" aria-pressed="false">Needs action</button><button type="button" data-v="past" aria-pressed="false">Past</button>
+  </div>
+  <div class="scroll"><table class="stack" id="admTable"><thead><tr><th>When</th><th>Who</th><th>Game</th><th class="num">Price</th><th>Status</th><th>Actions</th></tr></thead><tbody></tbody></table></div>
+  <h3 style="margin:28px 0 10px">Blocked times</h3><div class="list" id="blockList"></div>
+  <h3 style="margin:28px 0 10px">Settings</h3>
+  <form id="setForm" class="panel" novalidate>
+    <div class="two"><div><label for="sName">Lounge name</label><input id="sName"></div><div><label for="sRoom">Where (room / block)</label><input id="sRoom" placeholder="e.g. Block B, Room 214"></div></div>
+    <div class="two"><div><label for="sOpen">Opens</label><input id="sOpen" type="time"></div><div><label for="sClose">Closes (can be after midnight)</label><input id="sClose" type="time"></div></div>
+    <div class="two"><div><label for="sStep">Slot size</label><select id="sStep"><option value="30">30 minutes</option><option value="60">60 minutes</option></select></div><div><label for="sDays">Days bookable ahead</label><input id="sDays" type="number" min="1" max="14"></div></div>
+    <div class="two"><div><label for="sMax">Max hours per person per day</label><input id="sMax" type="number" min="0.5" step="0.5"></div><div><label for="sCur">Currency</label><input id="sCur"></div></div>
+    <div class="two"><div><label for="sPk">Packages (minutes = price, one per line)</label><textarea id="sPk"></textarea></div><div><label for="sExtra">2nd player extra, per hour</label><input id="sExtra" type="number" min="0"><label for="sContact">Your contact for payment</label><input id="sContact" placeholder="+998 … or @telegram"></div></div>
+    <div class="two"><div><label for="sGames">Games (one per line)</label><textarea id="sGames"></textarea></div><div><label for="sRules">House rules (one per line)</label><textarea id="sRules"></textarea></div></div>
+    <label for="sNotice">Announcement banner (leave empty to hide)</label><input id="sNotice" maxlength="140" placeholder="e.g. FIFA tournament Friday 9 PM!">
+    <div class="row" style="margin-top:16px"><button class="cta" style="width:auto;padding-inline:28px" type="submit">Save settings</button></div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span id="foot">© BiteIT Gaming</span><span class="row"><a class="waLink" href="#" target="_blank" rel="noopener">WhatsApp group</a><button type="button" class="ghost" id="ownerBtn">Admin login</button></span></div></footer>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div>
+  <h3 id="mTitle">You're booked!</h3><div class="code" id="mCode"></div><p id="mBody" class="small" style="font-size:15px"></p>
+  <a class="wa waLink" href="#" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin:6px 0 10px">Join WhatsApp group for updates</a>
+  <button type="button" class="ghost" id="mClose" style="width:100%">Done</button></div></div>
+
+<script src="config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+{
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const CFG=window.BITEIT_CONFIG||{};
+const WA=String(CFG.whatsapp||'').startsWith('https://')?CFG.whatsapp:'';
+document.querySelectorAll('.waLink').forEach(a=>{if(WA)a.href=WA;else a.hidden=true});
+const HOLD=5*60000,MIN=60000;
+const DEF={name:'BiteIT Gaming',room:'',currency:"so'm",open:'14:00',close:'02:00',step:30,days:7,maxPerDay:3,
+  packages:[{m:30,p:15000},{m:60,p:25000},{m:120,p:45000},{m:180,p:60000}],extra:5000,
+  games:['GTA VI','EA Sports FC','Call of Duty','Spider-Man 2','Tekken 8','Mortal Kombat 1'],
+  rules:['Arrive on time. After 10 minutes your slot can go to the next person.','Pay before you start.','Cancel from My bookings if you can\'t make it.','No food or drinks near the console.','Keep the volume down after 11 PM.','Treat the controllers like they\'re yours. Damage is paid for.'],
+  contact:'',notice:''};
+const S={cfg:{...DEF},adm:{status:{},blocks:[]},all:{},holds:{},contacts:{},me:'me',owner:false,live:false,day:0,sel:null,dur:null,players:1,admView:'up',holdExp:0};
+let db=null,auth=null,setDirty=false,subscribed=false,unContacts=null;
+const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+/* theme */
+const SUN='<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function paintTheme(){const t=document.documentElement.dataset.theme;$('#themeIco').innerHTML=t==='dark'?SUN:MOON;$('#themeBtn').setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');document.querySelector('meta[name=theme-color]').content=t==='dark'?'#0a0c13':'#f3f5fa'}
+$('#themeBtn').addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;LS.set('biteit-theme',t);paintTheme()});paintTheme();
+
+/* helpers */
+const hm=s=>{const[a,b]=String(s||'0:0').split(':').map(Number);return(a||0)*60+(b||0)};
+const money=n=>`${Math.round(n).toLocaleString()} ${S.cfg.currency||''}`.trim();
+const fT=ms=>new Date(ms).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
+const fD=ms=>new Date(ms).toLocaleDateString([],{weekday:'short',day:'numeric',month:'short'});
+const fDur=m=>m<60?`${m} min`:(m%60?`${(m/60).toFixed(1)} h`:`${m/60} h`);
+function dayRange(i){const o=hm(S.cfg.open),c=hm(S.cfg.close),over=c<=o,d=new Date(),nm=d.getHours()*60+d.getMinutes();
+  d.setHours(0,0,0,0);if(over&&nm<c)d.setDate(d.getDate()-1);d.setDate(d.getDate()+i);return[d.getTime()+o*MIN,d.getTime()+(over?c+1440:c)*MIN]}
+const list=()=>Object.entries(S.all).flatMap(([uid,items])=>(Array.isArray(items)?items:[]).filter(b=>b&&typeof b.start==='number').map(b=>({...b,uid})));
+const st=b=>b.cancelled?'cancelled':(S.adm.status?.[b.id]?.s||'pending');
+const paid=b=>!!S.adm.status?.[b.id]?.paid;
+const occ=b=>!b.cancelled&&!['rejected','noshow'].includes(st(b));
+const LBL={pending:'Pending',confirmed:'Confirmed',done:'Completed',rejected:'Declined',cancelled:'Cancelled',noshow:'No-show'};
+const holdsOthers=()=>Object.entries(S.holds).filter(([u,h])=>u!==S.me&&h&&h.exp>Date.now()).map(([,h])=>h);
+function busyAt(a,z){for(const b of list())if(occ(b)&&b.start<z&&b.end>a)return{b};for(const k of S.adm.blocks||[])if(k.start<z&&k.end>a)return{k};for(const h of holdsOthers())if(h.start<z&&h.end>a)return{h};return null}
+function price(m,pl){const p=(S.cfg.packages||[]).find(x=>x.m===m);return p?p.p+(pl===2?Math.round((S.cfg.extra||0)*m/60):0):0}
+const mine=()=>(S.all[S.me]||[]).filter(b=>b&&typeof b.start==='number');
+function myMins(i){const[a,z]=dayRange(i);return mine().filter(b=>occ(b)&&b.start>=a&&b.start<z).reduce((s,b)=>s+b.mins,0)}
+const maxM=()=>(+S.cfg.maxPerDay||3)*60;
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',3400)}
+const code=()=>'BIT-'+Math.random().toString(36).slice(2,6).toUpperCase();
+const step=()=>(+S.cfg.step||30)*MIN;
+function freeSlots(i){const[a,z]=dayRange(i),s=step(),now=Date.now(),r=[];for(let t=a;t+s<=z;t+=s)if(t>=now&&!busyAt(t,t+s))r.push(t);return r}
+
+/* render */
+function renderTop(){const c=S.cfg;const nm=esc(c.name||DEF.name).replace(/\s(Gaming)$/i,' <em>$1</em>');$('#brandName').innerHTML=nm;
+  $('#roomChip').hidden=!c.room;$('#roomChip').textContent=c.room||'';
+  $('#notice').hidden=!c.notice;$('#notice').textContent=c.notice||'';
+  const now=Date.now(),on=list().filter(occ).find(b=>b.start<=now&&b.end>now),blk=(S.adm.blocks||[]).find(k=>k.start<=now&&k.end>now);
+  const[a,z]=dayRange(0),open=now>=a&&now<z,next=list().filter(b=>occ(b)&&b.start>now).sort((x,y)=>x.start-y.start)[0];
+  let big,sub,pct=0;
+  if(on){big=`<span class="dot busy"></span>In game`;sub=`${on.game?esc(on.game)+' · ':''}free at ${esc(fT(on.end))} (${Math.max(1,Math.round((on.end-now)/MIN))} min)`;pct=(now-on.start)/(on.end-on.start)*100}
+  else if(blk){big=`<span class="dot busy"></span>Unavailable`;sub=`Back at ${esc(fT(blk.end))}${blk.reason?' · '+esc(blk.reason):''}`}
+  else if(open){big=`<span class="dot free"></span>Free right now`;sub=next&&next.start<z?`Next booking starts at ${esc(fT(next.start))}`:`Free until closing at ${esc(fT(z))}`}
+  else{big=`<span class="dot busy"></span>Closed`;sub=`Opens ${esc(fT(now<a?a:dayRange(1)[0]))}`}
+  $('#nowBig').innerHTML=big;$('#nowSub').innerHTML=sub;$('#meter').style.width=Math.max(0,Math.min(100,pct))+'%';
+  $('#clock').textContent=fT(now);
+  const fr=freeSlots(0);$('#mFree').textContent=fr.length;$('#mNext').textContent=fr.length?fT(fr[0]):(freeSlots(1)[0]?'Tmrw':'—');
+  const pk=[...(c.packages||[])].sort((x,y)=>x.m-y.m)[0];$('#mFrom').textContent=pk?money(pk.p).replace(/\s.*$/,''):'—';
+  $('#adminLink').hidden=!S.owner;$('#admin').hidden=!S.owner;$('#ownerTools').hidden=!S.owner}
+function renderDays(){const n=Math.max(1,Math.min(14,+S.cfg.days||7));if(S.day>=n)S.day=0;
+  $('#days').innerHTML=Array.from({length:n},(_,i)=>{const[a]=dayRange(i);
+    return`<button type="button" role="tab" data-d="${i}" aria-pressed="${i===S.day}" aria-selected="${i===S.day}">${i===0?'Today':i===1?'Tomorrow':esc(new Date(a).toLocaleDateString([],{weekday:'long'}))}<small>${esc(new Date(a).toLocaleDateString([],{day:'numeric',month:'short'}))} · ${freeSlots(i).length} free</small></button>`}).join('')}
+function renderSlots(){const[a,z]=dayRange(S.day),s=step(),now=Date.now();let h='';
+  for(let t=a;t+s<=z;t+=s){const bz=busyAt(t,t+s);let cls='free',sub='Available';
+    if(t<now){cls='past';sub=bz?'—':'Gone'}
+    else if(bz?.k){cls='blocked';sub=bz.k.reason||'Unavailable'}
+    else if(bz?.b){if(bz.b.uid===S.me){cls='mine';sub='Yours'}else{cls='taken';sub=S.owner?(bz.b.name||'Booked'):'Booked'}}
+    else if(bz?.h){cls='held';sub='Being booked'}
+    if(cls==='free'&&S.sel!==null&&S.dur&&t>=S.sel&&t<S.sel+S.dur*MIN){cls='sel';sub=t===S.sel?'Start':'Selected'}
+    h+=`<button type="button" class="slot ${cls}" data-t="${t}" ${cls==='free'||cls==='sel'?'':'disabled'} aria-label="${esc(fT(t))} ${esc(sub)}"><b>${esc(fT(t))}</b><span>${esc(sub)}</span></button>`}
+  $('#slots').innerHTML=h||'<div class="empty">No slots this day.</div>'}
+function fits(t,m){const[,z]=dayRange(S.day);return t+m*MIN<=z&&!busyAt(t,t+m*MIN)}
+const overLimit=m=>!S.owner&&(myMins(S.day)+m)>maxM();
+function renderForm(){const pk=[...(S.cfg.packages||[])].sort((x,y)=>x.m-y.m);
+  $('#durs').innerHTML=pk.map(p=>{const ok=S.sel!==null&&fits(S.sel,p.m)&&!overLimit(p.m);return`<button type="button" data-m="${p.m}" aria-pressed="${S.dur===p.m}" ${ok?'':'disabled'}>${esc(fDur(p.m))}</button>`}).join('')||'<span class="small">No packages set</span>';
+  $('#p1').setAttribute('aria-pressed',S.players===1);$('#p2').setAttribute('aria-pressed',S.players===2);
+  const g=$('#game'),gv=g.value,gh=(S.cfg.games?.length?S.cfg.games:DEF.games).map(x=>`<option>${esc(x)}</option>`).join('')+'<option>Something else</option>';
+  if(g.dataset.h!==gh){g.innerHTML=gh;g.dataset.h=gh;if(gv)g.value=gv}
+  if(S.sel!==null&&S.dur){$('#when').textContent=`${fT(S.sel)} – ${fT(S.sel+S.dur*MIN)}`;$('#whenSub').textContent=`${fD(S.sel)} · ${fDur(S.dur)} · ${S.players} player${S.players>1?'s':''}`;$('#total').textContent=money(price(S.dur,S.players))}
+  else{$('#when').textContent='Pick a time';$('#whenSub').textContent='Nothing selected yet.';$('#total').textContent='—'}
+  const has=S.sel!==null&&!!S.dur;$('#bookBtn').disabled=!has;$('#blockBtn').disabled=!has;renderHold();
+  const left=maxM()-myMins(S.day);$('#limitNote').textContent=S.owner?'Admin bookings skip the daily limit.':`Up to ${fDur(maxM())} per person per day${left<maxM()?` · ${fDur(Math.max(0,left))} left on this day`:''}.`}
+function renderHold(){const e=$('#hold');if(S.sel===null||!S.holdExp){e.style.display='none';return}
+  const l=Math.max(0,S.holdExp-Date.now()),m=Math.floor(l/60000),s=Math.floor(l%60000/1000);e.style.display='flex';e.textContent=`Held for you · ${m}:${String(s).padStart(2,'0')}`;
+  if(!l){clearSel();toast('Your hold expired. Pick the slot again.')}}
+function renderMine(){const now=Date.now(),m=mine().filter(b=>b.end>now-2*86400000).sort((x,y)=>x.start-y.start);
+  $('#mineList').innerHTML=m.length?m.map(b=>{const s=st(b),up=b.start>now&&!b.cancelled;
+    return`<div class="item"><div><b>${esc(fD(b.start))}, ${esc(fT(b.start))} – ${esc(fT(b.end))}</b><div class="small">${esc(b.code||'')} · ${esc(b.game||'')} · ${b.players===2?'2 players':'1 player'} · ${esc(money(b.price||0))}</div>
+      <div class="row" style="margin-top:6px"><span class="badge b-${esc(s)}">${esc(LBL[s]||s)}</span>${paid(b)?'<span class="badge b-paid">Paid</span>':''}</div></div>
+      ${up?`<button type="button" class="ghost" data-cancel="${esc(b.id)}">Cancel</button>`:''}</div>`}).join(''):'<div class="empty">No bookings yet. Pick a free time above and your ticket shows up here.</div>'}
+function renderInfo(){const c=S.cfg,pk=[...(c.packages||[])].sort((x,y)=>x.m-y.m),best=pk.reduce((b,p)=>!b||p.p/p.m<b.p/b.m?p:b,null);
+  $('#priceCards').innerHTML=pk.map(p=>`<div class="price${p===best&&pk.length>1?' pop':''}">${p===best&&pk.length>1?'<span class="tag">Best value</span>':''}<div class="small">${esc(fDur(p.m))}</div><b>${esc(money(p.p))}</b><div class="small">${esc(money(p.p/(p.m/60)))} per hour</div></div>`).join('');
+  $('#extraNote').textContent=`Pay per session.${c.extra?` Second player adds ${money(c.extra)} per hour.`:''} Max ${fDur(maxM())} per person per day so everyone gets a turn.`;
+  $('#rulesList').innerHTML=(c.rules||[]).map(r=>`<li>${esc(r)}</li>`).join('');
+  $('#gamesLine').textContent='On the console: '+(c.games||[]).join(', ')+'. Want something else installed? Ask in the group.';
+  $('#contactLine').textContent=c.contact?`Admin contact: ${c.contact}`:'';
+  $('#foot').textContent=`© ${new Date().getFullYear()} ${c.name||DEF.name} · open ${fT(dayRange(0)[0])} – ${fT(dayRange(0)[1])}`}
+function renderAdmin(){if(!S.owner)return;const now=Date.now(),all=list(),[a0,z0]=dayRange(0);
+  const today=all.filter(b=>b.start>=a0&&b.start<z0&&occ(b)),wk=all.filter(b=>occ(b)&&b.start>=now-7*86400000&&b.start<now);
+  const rev=x=>x.filter(paid).reduce((s,b)=>s+(b.price||0),0),pend=all.filter(b=>!b.cancelled&&st(b)==='pending'&&b.end>now);
+  const gm={};wk.forEach(b=>gm[b.game]=(gm[b.game]||0)+b.mins);const top=Object.entries(gm).sort((x,y)=>y[1]-x[1])[0];
+  $('#stats').innerHTML=[['Collected today',money(rev(today))],['Booked today',fDur(today.reduce((s,b)=>s+b.mins,0))],['Needs action',pend.length],['Last 7 days',money(rev(wk))],['Top game, 7 days',top?top[0]:'—']]
+    .map(([l,v])=>`<div class="stat"><div class="small">${esc(l)}</div><b>${esc(v)}</b></div>`).join('');
+  const f={up:b=>b.end>now,today:b=>b.start>=a0&&b.start<z0,pending:b=>!b.cancelled&&(st(b)==='pending'||(st(b)==='confirmed'&&!paid(b)))&&b.end>now-86400000,past:b=>b.end<=now}[S.admView];
+  const rows=all.filter(f).sort((x,y)=>S.admView==='past'?y.start-x.start:x.start-y.start).slice(0,150);
+  $('#admTable tbody').innerHTML=rows.length?rows.map(b=>{const s=st(b),id=esc(b.id),ct=S.contacts[b.uid]?.contact||'';
+    const act=b.cancelled?'':`<div class="row">${s==='pending'?`<button type="button" data-a="confirmed" data-id="${id}">Confirm</button><button type="button" data-a="rejected" data-id="${id}">Decline</button>`:''}
+      <button type="button" data-a="paid" data-id="${id}">${paid(b)?'Unpaid':'Paid'}</button>${s==='confirmed'?`<button type="button" data-a="done" data-id="${id}">Done</button><button type="button" data-a="noshow" data-id="${id}">No-show</button>`:''}</div>`;
+    return`<tr><td><b>${esc(fD(b.start))}</b><br>${esc(fT(b.start))} – ${esc(fT(b.end))}</td><td>${esc(b.name||'—')}${b.room?' · Rm '+esc(b.room):''}<br><span class="small">${esc(ct)}${b.note?' · '+esc(b.note):''}</span></td>
+      <td>${esc(b.game||'')}<br><span class="small">${b.players===2?'2 players':'1 player'} · ${esc(b.code||'')}</span></td><td class="num">${esc(money(b.price||0))}</td>
+      <td><span class="badge b-${esc(s)}">${esc(LBL[s]||s)}</span> ${paid(b)?'<span class="badge b-paid">Paid</span>':''}</td><td>${act}</td></tr>`}).join(''):`<tr><td colspan="6" class="small">Nothing here yet.</td></tr>`;
+  const bl=(S.adm.blocks||[]).filter(k=>k.end>now).sort((x,y)=>x.start-y.start);
+  $('#blockList').innerHTML=bl.length?bl.map(k=>`<div class="item"><div><b>${esc(fD(k.start))}, ${esc(fT(k.start))} – ${esc(fT(k.end))}</b><div class="small">${esc(k.reason||'Unavailable')}</div></div><button type="button" class="ghost" data-unblock="${esc(k.id)}">Remove</button></div>`).join(''):'<div class="empty">No blocked times. Select slots above and use Block to close them.</div>';
+  if(!setDirty)fillSettings()}
+function fillSettings(){const c=S.cfg;$('#sName').value=c.name||'';$('#sRoom').value=c.room||'';$('#sOpen').value=c.open;$('#sClose').value=c.close;$('#sStep').value=String(c.step||30);$('#sDays').value=c.days;$('#sMax').value=c.maxPerDay;$('#sCur').value=c.currency||'';
+  $('#sPk').value=(c.packages||[]).map(p=>`${p.m} = ${p.p}`).join('\n');$('#sExtra').value=c.extra||0;$('#sContact').value=c.contact||'';$('#sGames').value=(c.games||[]).join('\n');$('#sRules').value=(c.rules||[]).join('\n');$('#sNotice').value=c.notice||''}
+function render(){renderTop();renderDays();renderSlots();renderForm();renderMine();renderInfo();renderAdmin()}
+
+/* writes */
+const q={};function write(path,data){const p=(q[path]||Promise.resolve()).then(()=>db?db.doc(path).set(data):null);q[path]=p.catch(()=>{});return p}
+function err(e){console.error(e);toast(e?.code==='taken'?'Someone just booked that time. Pick another.':e?.code==='permission-denied'?'Not allowed. Check your Firebase rules.':'Couldn\'t save. Check your connection and try again.')}
+const lines=s=>s.split('\n').map(x=>x.trim()).filter(Boolean);
+let holdT=null;
+function putHold(){if(S.sel===null||!S.dur)return;S.holdExp=Date.now()+HOLD;clearTimeout(holdT);
+  if(db){const h={start:S.sel,end:S.sel+S.dur*MIN,exp:S.holdExp};holdT=setTimeout(()=>write('holds/'+S.me,h).catch(()=>{}),350)}}
+function dropHold(){clearTimeout(holdT);S.holdExp=0;if(db)(q['holds/'+S.me]||Promise.resolve()).then(()=>db.doc('holds/'+S.me).delete()).catch(()=>{})}
+function clearSel(){S.sel=null;S.dur=null;dropHold();renderSlots();renderForm()}
+
+async function book(e){e.preventDefault();if(S.sel===null||!S.dur)return;
+  const name=$('#fname').value.trim(),room=$('#froom').value.trim(),contact=$('#fcontact').value.trim();
+  if(!name){toast('Add your name');$('#fname').focus();return}
+  if(!room&&!S.owner){toast('Add your room number');$('#froom').focus();return}
+  if(!contact&&!S.owner){toast('Add your WhatsApp or phone number');$('#fcontact').focus();return}
+  LS.set('biteit-me',JSON.stringify({name,room,contact}));
+  const btn=$('#bookBtn');btn.disabled=true;btn.textContent='Locking your slot…';
+  const start=S.sel,end=start+S.dur*MIN;
+  const b={id:Math.random().toString(36).slice(2,10),code:code(),start,end,mins:S.dur,players:S.players,game:$('#game').value,name,room,note:$('#fnote').value.trim(),price:price(S.dur,S.players),created:Date.now(),cancelled:false};
+  try{let items;
+    if(db){await db.runTransaction(async tx=>{const lock=db.doc('locks/booking'),l=await tx.get(lock);
+        const[bs,hs]=await Promise.all([db.collection('bookings').get(),db.collection('holds').get()]);
+        S.all={};bs.docs.forEach(d=>S.all[d.id]=d.data().items||[]);S.holds={};hs.docs.forEach(d=>S.holds[d.id]=d.data());
+        if(start<Date.now()||busyAt(start,end))throw{code:'taken'};
+        items=[...mine().filter(x=>x.end>Date.now()-30*86400000),b];
+        tx.set(db.doc('bookings/'+S.me),{items});tx.set(lock,{n:((l.exists&&l.data().n)||0)+1,at:Date.now()})});
+      S.all[S.me]=items;write('contacts/'+S.me,{name,room,contact}).catch(()=>{})}
+    else{if(busyAt(start,end))throw{code:'taken'};items=[...mine(),b];S.all[S.me]=items}
+    if(S.owner){S.adm.status={...S.adm.status,[b.id]:{s:'confirmed',paid:false}};saveAdm()}
+    $('#fnote').value='';clearSel();render();
+    $('#mCode').textContent=b.code;$('#mBody').textContent=`${fD(start)}, ${fT(start)} – ${fT(end)} · ${b.game} · ${money(b.price)}. ${S.owner?'Saved as confirmed.':'The admin will confirm it. Pay before you start'+(S.cfg.contact?` (${S.cfg.contact})`:'')+'.'}`;
+    $('#modal').style.display='flex';$('#mClose').focus()}
+  catch(x){err(x);if(x?.code==='taken'){clearSel();render()}}
+  finally{btn.textContent='Confirm booking';renderForm()}}
+function saveAdm(){const now=Date.now(),ids=new Set(list().map(b=>b.id)),status={};for(const[k,v]of Object.entries(S.adm.status||{}))if(ids.has(k))status[k]=v;
+  S.adm={status,blocks:(S.adm.blocks||[]).filter(k=>k.end>now-86400000)};return write('admin/state',S.adm).catch(err)}
+async function cancel(id){const items=mine().map(b=>b.id===id?{...b,cancelled:true}:b);S.all[S.me]=items;render();try{await write('bookings/'+S.me,{items});toast('Booking cancelled')}catch(x){err(x)}}
+
+/* events */
+$('#days').addEventListener('click',e=>{const b=e.target.closest('[data-d]');if(!b)return;S.day=+b.dataset.d;clearSel();renderDays()});
+$('#slots').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(!b||b.disabled)return;const t=+b.dataset.t;
+  if(S.sel===t){clearSel();return}
+  const pk=[...(S.cfg.packages||[])].sort((x,y)=>x.m-y.m),ok=m=>fits(t,m)&&!overLimit(m);
+  const want=S.dur&&ok(S.dur)?S.dur:(pk.find(p=>p.m===60&&ok(60))||pk.find(p=>ok(p.m)))?.m;
+  if(!want){toast(pk[0]&&overLimit(pk[0].m)?'You\'ve reached today\'s booking limit.':'Not enough free time from here. Try an earlier start.');return}
+  S.sel=t;S.dur=want;putHold();renderSlots();renderForm()});
+$('#durs').addEventListener('click',e=>{const b=e.target.closest('[data-m]');if(!b||b.disabled)return;S.dur=+b.dataset.m;putHold();renderSlots();renderForm()});
+$('#p1').addEventListener('click',()=>{S.players=1;renderForm()});$('#p2').addEventListener('click',()=>{S.players=2;renderForm()});
+$('#form').addEventListener('submit',book);
+const closeModal=()=>{$('#modal').style.display='none'};
+$('#mClose').addEventListener('click',()=>{closeModal();location.hash='mine'});
+$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+$('#mineList').addEventListener('click',e=>{const b=e.target.closest('[data-cancel]');if(!b)return;if(b.dataset.sure)cancel(b.dataset.cancel);else{b.dataset.sure=1;b.textContent='Tap again to cancel';setTimeout(()=>{if(b.isConnected){delete b.dataset.sure;b.textContent='Cancel'}},4000)}});
+$('#blockBtn').addEventListener('click',async()=>{if(S.sel===null||!S.dur)return;const k={id:Math.random().toString(36).slice(2,10),start:S.sel,end:S.sel+S.dur*MIN,reason:$('#blockReason').value.trim()};
+  S.adm.blocks=[...(S.adm.blocks||[]),k];$('#blockReason').value='';clearSel();render();await saveAdm();toast('Time blocked')});
+$('#blockList').addEventListener('click',async e=>{const b=e.target.closest('[data-unblock]');if(!b)return;S.adm.blocks=(S.adm.blocks||[]).filter(k=>k.id!==b.dataset.unblock);render();await saveAdm()});
+$('#admTabs').addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;S.admView=b.dataset.v;for(const x of $('#admTabs').children)x.setAttribute('aria-pressed',x===b);renderAdmin()});
+$('#admTable').addEventListener('click',async e=>{const b=e.target.closest('[data-a]');if(!b)return;const id=b.dataset.id,c={...(S.adm.status?.[id]||{s:'pending',paid:false})};
+  if(b.dataset.a==='paid'){c.paid=!c.paid;if(c.s==='pending')c.s='confirmed'}else c.s=b.dataset.a;
+  S.adm.status={...S.adm.status,[id]:c};render();await saveAdm()});
+$('#setForm').addEventListener('input',()=>setDirty=true);
+$('#setForm').addEventListener('submit',async e=>{e.preventDefault();
+  const pk=lines($('#sPk').value).map(l=>{const[m,p]=l.split(/[=:]/).map(x=>parseFloat(String(x).replace(/[^\d.]/g,'')));return{m:Math.round(m),p:p||0}}).filter(p=>p.m>0&&p.m<=720);
+  if(!pk.length){toast('Add at least one package, like "60 = 25000"');return}
+  const c={name:$('#sName').value.trim()||DEF.name,room:$('#sRoom').value.trim(),open:$('#sOpen').value||DEF.open,close:$('#sClose').value||DEF.close,step:+$('#sStep').value||30,
+    days:Math.max(1,Math.min(14,+$('#sDays').value||7)),maxPerDay:Math.max(.5,+$('#sMax').value||3),currency:$('#sCur').value.trim(),packages:pk,extra:Math.max(0,+$('#sExtra').value||0),
+    contact:$('#sContact').value.trim(),games:lines($('#sGames').value),rules:lines($('#sRules').value),notice:$('#sNotice').value.trim()};
+  S.cfg={...DEF,...c};setDirty=false;render();try{await write('config/settings',c);toast('Settings saved')}catch(x){err(x)}});
+
+try{const p=JSON.parse(LS.get('biteit-me')||'null');if(p){$('#fname').value=p.name||'';$('#froom').value=p.room||'';$('#fcontact').value=p.contact||''}}catch(e){}
+render();
+setInterval(()=>{renderHold()},1000);
+setInterval(()=>{renderTop();renderDays();renderSlots()},30000);
+
+/* Firebase */
+const fb=CFG.firebase||{},ready=window.firebase&&fb.apiKey&&!/^YOUR_/.test(fb.apiKey);
+const note=$('#modeNote');
+if(!ready){S.owner=true;note.hidden=false;note.textContent='Preview mode: Firebase isn\'t connected yet, so bookings stay on this screen. Fill in config.js to go live.';render();$('#ownerBtn').hidden=true}
+else{
+  firebase.initializeApp(fb);auth=firebase.auth();db=firebase.firestore();S.live=true;
+  const admins=(CFG.adminEmails||[]).map(x=>String(x).toLowerCase());
+  auth.onAuthStateChanged(async u=>{
+    if(!u){auth.signInAnonymously().catch(e=>{console.error(e);note.hidden=false;note.textContent='Couldn\'t sign in. Turn on Anonymous sign-in in Firebase Authentication.'});return}
+    S.me=u.uid;S.owner=!!u.email&&admins.includes(u.email.toLowerCase());
+    $('#ownerBtn').textContent=u.isAnonymous?'Admin login':(S.owner?'Log out (admin)':'Log out');
+    if(u.email&&!S.owner)toast('This Google account isn\'t an admin.');
+    if(!subscribed)subscribe();
+    if(unContacts){unContacts();unContacts=null}
+    if(S.owner)unContacts=db.collection('contacts').onSnapshot(s=>{S.contacts={};s.docs.forEach(d=>S.contacts[d.id]=d.data());renderAdmin()},()=>{});
+    render()});
+  $('#ownerBtn').addEventListener('click',async()=>{const u=auth.currentUser;
+    try{if(u&&!u.isAnonymous){await auth.signOut()}else{await auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())}}catch(e){console.error(e);toast('Login failed: '+(e.code||'try again'))}});
+}
+function subscribe(){subscribed=true;
+  const t=setTimeout(()=>{note.hidden=false;note.textContent='Can\'t reach the booking list yet. What you see may be out of date.'},10000);
+  const ok=()=>{clearTimeout(t);note.hidden=true};
+  db.collection('bookings').onSnapshot(s=>{S.all={};s.docs.forEach(x=>S.all[x.id]=x.data().items||[]);if(!s.metadata.fromCache)ok();render()},e=>{ok();console.error(e);toast('Live updates stopped. Reload the page.')});
+  db.collection('holds').onSnapshot(s=>{S.holds={};s.docs.forEach(x=>S.holds[x.id]=x.data());renderSlots();renderDays();renderForm()},()=>{});
+  db.doc('admin/state').onSnapshot(s=>{const v=s.exists?s.data():{};S.adm={status:{...(v.status||{})},blocks:[...(v.blocks||[])]};render()},()=>{});
+  db.doc('config/settings').onSnapshot(s=>{S.cfg={...DEF,...(s.exists?s.data():{})};render()},()=>{});
+}
+addEventListener('pagehide',()=>{if(S.sel!==null)dropHold()});
+}
+</script>
+</body>
+</html>
